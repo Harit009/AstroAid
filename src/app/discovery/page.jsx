@@ -114,6 +114,7 @@ function DiscoveryContent() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-[#0A1F44]/40 backdrop-blur-md text-white text-md pl-12 pr-4 py-4 border border-[#102A50] focus:outline-none focus:border-[#00E5FF] focus:shadow-[0_0_20px_rgba(0,229,255,0.3)] transition-all rounded-xl placeholder:text-[#555555]"
+              suppressHydrationWarning
           />
         </div>
 

@@ -20,7 +20,8 @@ export default function Home() {
   useEffect(() => {
     const fetchApod = async () => {
       try {
-        const response = await fetch('https://api.nasa.gov/planetary/apod?api_key=lAdhdmrRy8SIyfx43g1gs6Hht1n6bcmpS1RtK70z');
+        console.log("Telemetry Environment Check:", process.env.NEXT_PUBLIC_NASA_API_KEY ? "CONNECTED ✅" : "FAILED ❌");
+        const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.NEXT_PUBLIC_NASA_API_KEY}`);
         if (!response.ok) throw new Error('APOD failed');
         const data = await response.json();
         setApodData(data);
@@ -82,6 +83,7 @@ export default function Home() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onKeyDown={handleSearch}
                 className="w-full bg-[#0A1F44]/40 backdrop-blur-xl text-white text-lg pl-16 pr-6 py-5 md:py-6 rounded-2xl border border-[#102A50] group-focus-within:border-[#00E5FF] group-focus-within:shadow-[0_0_30px_rgba(0,229,255,0.2)] focus:outline-none transition-all duration-500 placeholder:text-[#AAAAAA]"
+                suppressHydrationWarning
               />
             </div>
           </section>

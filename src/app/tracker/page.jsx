@@ -14,16 +14,17 @@ export default function TrackerPage() {
   useEffect(() => {
     const fetchAsteroids = async () => {
       try {
+        console.log("Telemetry Environment Check:", process.env.NEXT_PUBLIC_NASA_API_KEY ? "CONNECTED ✅" : "FAILED ❌");
         const today = getTodayDateString();
-        const response = await fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${today}&end_date=${today}&api_key=lAdhdmrRy8SIyfx43g1gs6Hht1n6bcmpS1RtK70z`);
+        const response = await fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${today}&end_date=${today}&api_key=${process.env.NEXT_PUBLIC_NASA_API_KEY}`);
         const data = await response.json();
         if (data.near_earth_objects && data.near_earth_objects[today]) {
           setAsteroids(data.near_earth_objects[today]);
         }
       } catch (err) {
-        console.error("Failed downing NeoWs", err);
+        console.error("Failed fetching NeoWs", err);
       } finally {
-          setIsAsteroidsLoading(false);
+        setIsAsteroidsLoading(false);
       }
     };
     fetchAsteroids();
@@ -33,12 +34,12 @@ export default function TrackerPage() {
   const aiSummary = `Risk Assessment: Today, ${asteroids.length} asteroids are passing near Earth. ${numHazards === 0 ? "None are expected to heavily impact or threaten us." : `However, ${numHazards} are classified as potentially hazardous and must be monitored.`}`;
 
   return (
-    <div className="min-h-screen bg-transparent font-sans px-6 sm:px-10 pt-10 pb-24 md:pb-10">
-      <div className="w-full max-w-7xl mx-auto flex flex-col gap-16">
-        
-        {/* Asteroid Tracker Section */}
-        <section>
-          <div className="border-b border-[#102A50] pb-6 mb-8 mt-12">
+    <div className="min-h-screen bg-transparent font-sans pb-24 md:pb-10">
+      <div className="w-full max-w-7xl mx-auto flex flex-col gap-16 px-6 sm:px-10">
+
+        {/* ── Asteroid Trajectory Array ── */}
+        <section className="pt-10 mt-12">
+          <div className="border-b border-[#102A50] pb-6 mb-8">
             <h2 className="text-3xl font-black text-white uppercase tracking-widest drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">
               Asteroid Trajectory Array
             </h2>
@@ -79,13 +80,11 @@ export default function TrackerPage() {
                     asteroids.map((asteroid) => {
                       const isHazard = asteroid.is_potentially_hazardous_asteroid;
                       return (
-                        <tr 
-                          key={asteroid.id} 
+                        <tr
+                          key={asteroid.id}
                           className="border-b border-[rgba(0,229,255,0.2)] hover:bg-[#00E5FF]/10 transition-colors"
                         >
-                          <td className="p-6 font-bold text-white tracking-wide">
-                            {asteroid.name}
-                          </td>
+                          <td className="p-6 font-bold text-white tracking-wide">{asteroid.name}</td>
                           <td className="p-6 text-[#AAAAAA] font-mono">
                             {asteroid.estimated_diameter.kilometers.estimated_diameter_min.toFixed(2)} - {asteroid.estimated_diameter.kilometers.estimated_diameter_max.toFixed(2)} km
                           </td>

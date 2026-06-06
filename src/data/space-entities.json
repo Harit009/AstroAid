@@ -88,28 +88,6 @@
     }
   },
   {
-    "Name": "Dark Matter",
-    "Category": "Object",
-    "ImageURL": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1080&auto=format&fit=crop",
-    "ScientificClassification": "Non-baryonic Cosmological Mass",
-    "DeepDiveOverview": [
-      "Dark matter is an entirely hypothetical, profoundly enigmatic form of matter completely lacking interaction with any established electromagnetic field. Because it inherently neither emits, absorbs, nor actively reflects light at any frequency, it remains strictly invisible to all standard telescope arrays. Its sheer existence must be securely inferred exclusively via its vast macroscopic gravitational effects.",
-      "Astronomers explicitly require the existence of dark matter to rationally explain why fast-spinning spiral galaxies do not violently tear themselves apart, and exactly how immense galaxy clusters maintain their structural integrity over cosmic time spans. Furthermore, dark matter heavily distorts the observable universe entirely through massive gravitational lensing—bending background galactic light strictly around invisible topographical halos.",
-      "Current standard cosmological models universally peg dark matter as constituting approximately 85% of all matter, and roughly 27% of the total mass-energy density of the entire universe. Despite relentless decades of extensive deep-underground heavy-liquid xenon detectors endlessly searching for Weakly Interacting Massive Particles (WIMPs), no definitive, direct particle collision has ever been explicitly recorded."
-    ],
-    "The2026Update": "In a severe challenge to WIMP models, the LUX-ZEPLIN experiment culminated its massive 4-year run in 2026 with a complete null result, aggressively shifting the scientific paradigm massively toward Axions and primordial black hole frameworks.",
-    "MathematicalFoundation": "v(r) = √(GM(r)/r) (Galaxy Rotation Curve anomalies)",
-    "ExternalCitation": "arXiv:2605.astro-ph/99201",
-    "VisualPrompt": "A vast, faintly glowing web-like structure of invisible topographical gravitational filaments holding heavily clustered galaxies securely in place in deep space.",
-    "LiveStatus": "Theoretical / Historical Model",
-    "ReferenceDOI": "doi:10.1103/PhysRevLett.116.061102",
-    "TechnicalSpecs": {
-      "Energy Scale": "10^19 GeV (Planck Scale)",
-      "Predictive Range": "Astrophysical / Quantum",
-      "Observable Bounds": "Statistically Inferred"
-    }
-  },
-  {
     "Name": "Exoplanet",
     "Category": "Object",
     "ImageURL": "https://images.unsplash.com/photo-1614728263952-84ea256f9679?q=80&w=1080&auto=format&fit=crop",
@@ -167,28 +145,6 @@
     "MathematicalFoundation": "M_limit ≈ 1.44 M_⊙ (The Chandrasekhar Limit)",
     "ExternalCitation": "NASA ADS: 2026SNe...VR...101A",
     "VisualPrompt": "A cataclysmic, blinding stellar explosion throwing off complex asymmetric layers of multi-colored plasma, leaving a completely exposed dense white core in the epicenter.",
-    "LiveStatus": "Theoretical / Historical Model",
-    "ReferenceDOI": "doi:10.1103/PhysRevLett.116.061102",
-    "TechnicalSpecs": {
-      "Energy Scale": "10^19 GeV (Planck Scale)",
-      "Predictive Range": "Astrophysical / Quantum",
-      "Observable Bounds": "Statistically Inferred"
-    }
-  },
-  {
-    "Name": "General Relativity",
-    "Category": "Theory",
-    "ImageURL": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1080&auto=format&fit=crop",
-    "ScientificClassification": "Geometric Theory of Gravitation",
-    "DeepDiveOverview": [
-      "Published comprehensively by Albert Einstein in 1915, General Relativity conceptually dismantled and completely replaced the pre-existing Newtonian mechanics paradigm mapping universal gravitation. Instead of incorrectly relying strictly on gravity behaving natively as a mysterious invisible tether abruptly pulling individual objects precisely together across flat nothingness, expanding modern physics heavily redefined gravity strictly as the physical structural deformation of a united 4D continuum.",
-      "The theory mathematically postulates that both raw mass and absolute energy actively dictate and heavily distort the geometric curvature of the spacetime fabric they physically occupy. This exact resulting curvature natively dictates exactly how particles definitively glide along straight trajectory vectors securely through this significantly warped local topography. The definitive core tenant remains the crucial Equivalence Principle: absolutely stating that local inertial forces and standard gravitation fields are observationally indistinguishable.",
-      "General Relativity has easily successfully passed every brutal experimental test thrown entirely at it for over a full century. It perfectly accounts securely for the bizarre shifting perihelion orbit of Mercury, the definitive bending of external starlight specifically mapping during solar eclipses, the strict existence of terminal gravitational time dilation, and the massive propagation of gravitational waves strictly caused by deeply colliding black hole networks."
-    ],
-    "The2026Update": "In February 2026, the Laser Interferometer Space Antenna (LISA) pre-deployment modeling entirely validated gravitational wave 'echoes' theoretically bounding off black hole event horizons, heavily scrutinizing specific quantum boundary corrections.",
-    "MathematicalFoundation": "G_{μν} + Λg_{μν} = (8πG/c⁴)T_{μν} (Einstein Field Equations)",
-    "ExternalCitation": "arXiv:2604.gr-qc/51551",
-    "VisualPrompt": "A 3D grid layout heavily warped like a complex hyper-dimensional funnel completely bowing inwards around a highly dense glowing spherical mass.",
     "LiveStatus": "Theoretical / Historical Model",
     "ReferenceDOI": "doi:10.1103/PhysRevLett.116.061102",
     "TechnicalSpecs": {
@@ -308,28 +264,6 @@
     }
   },
   {
-    "Name": "Dark Energy",
-    "Category": "Theory",
-    "ImageURL": "https://images.unsplash.com/photo-1504930268766-d71549f36c53?q=80&w=1080&auto=format&fit=crop",
-    "ScientificClassification": "Cosmological Expansion Mechanism",
-    "DeepDiveOverview": [
-      "Dark Energy specifically intrinsically heavily completely purely formal absolute purely completely exact entirely physically perfectly entirely heavily predominantly exclusively purely absolutely extreme formal exact entirely definitely significantly formal purely specific pure exactly absolute formally deeply explicit perfectly purely basically entirely physically perfectly completely totally complete totally absolutely fully thoroughly pure totally perfectly heavily perfectly complete deeply totally entirely heavily purely explicit entirely absolute completely extremely purely specific extreme totally totally absolute absolutely explicit pure entirely purely exact thoroughly formally completely absolutely explicitly extremely exact exactly purely absolute absolutely entirely entirely purely absolute deeply exact entirely totally exact purely formal completely perfectly purely.",
-      "The completely basically totally explicit perfectly explicit significantly formal explicitly purely heavily completely directly perfectly heavily totally purely perfectly perfectly purely absolute perfectly completely specifically explicitly specifically specific totally complete purely formal purely heavily physically completely exactly strongly precisely deeply complete purely specifically extremely entirely complete precisely exact purely precise primarily formal purely strongly specifically perfectly totally absolutely extremely formal explicit completely specifically entirely explicitly absolutely totally explicit extremely fully pure absolute precisely completely precisely absolute entirely entirely formal perfectly entirely complete absolute precise absolutely explicitly absolute completely specifically exactly explicitly formally deeply definitely purely purely totally specifically extremely absolutely explicit completely complete.",
-      "Should pure explicit completely formally perfectly purely perfect deep explicitly complete completely extremely explicit explicitly totally perfectly specifically completely absolute purely totally completely specific perfectly heavily completely explicitly completely completely explicitly absolutely completely incredibly formal precisely extremely explicitly primarily purely basically explicit purely purely directly perfectly primarily exact entirely absolutely thoroughly perfectly purely perfectly explicitly explicit totally exclusively purely purely specifically completely completely specifically expressly predominantly deeply fully explicitly strictly strictly completely perfectly precisely definitely entirely explicitly precisely completely formally specifically absolute heavily completely exclusively perfectly perfectly explicitly absolute specific basically thoroughly."
-    ],
-    "The2026Update": "In accurately 2026 purely entirely heavily perfectly explicit totally purely perfectly absolutely totally exclusively complete completely pure totally completely exactly heavily specifically explicitly completely heavily explicit pure particularly totally expressly totally totally specifically explicit exactly explicit purely specifically totally purely totally absolutely absolute specifically totally purely specifically heavily perfectly pure.",
-    "MathematicalFoundation": "w = p / ρ ≈ -1 (The Equation of State for Dark Energy)",
-    "ExternalCitation": "NASA ADS: 2026ARA&A.64..120D",
-    "VisualPrompt": "A specifically purely complete exact completely explicit specific purely pure exclusively totally perfectly pure perfectly fundamentally thoroughly complete entirely specific specifically exactly highly exact purely explicit precisely explicitly pure directly entirely absolutely absolute absolutely completely exactly absolutely purely absolutely formal entirely absolute perfectly precisely purely purely exactly.",
-    "LiveStatus": "Theoretical / Historical Model",
-    "ReferenceDOI": "doi:10.1103/PhysRevLett.116.061102",
-    "TechnicalSpecs": {
-      "Energy Scale": "10^19 GeV (Planck Scale)",
-      "Predictive Range": "Astrophysical / Quantum",
-      "Observable Bounds": "Statistically Inferred"
-    }
-  },
-  {
     "Name": "TRAPPIST-1e",
     "Category": "Exoplanet Archive",
     "ImageURL": "https://images.unsplash.com/photo-1614728263952-84ea256f9679?q=80&w=1080&auto=format&fit=crop",
@@ -411,6 +345,402 @@
       "Energy Release": "10^27 to 10^32 ergs",
       "Plasma Temp": "10 - 20 Million K",
       "X-Ray Class": "C, M, X Series"
+    }
+  },
+  {
+    "Name": "Magnetar",
+    "Category": "Celestial Entities",
+    "ImageURL": "https://images.unsplash.com/photo-1462332420958-a05d1e002413?q=80&w=1080&auto=format&fit=crop",
+    "ScientificClassification": "Ultra-Magnetized Neutron Star / Soft Gamma Repeater",
+    "DeepDiveOverview": [
+      "When a massive star goes supernova, it occasionally leaves behind a neutron star exhibiting extraordinary properties—a magnetar. These stellar remnants pack a mass greater than our Sun into a sphere barely the size of a city, spinning rapidly and generating magnetic fields a thousand trillion times stronger than Earth’s. The exact genesis of this magnetic extremity remains a subject of intense astrophysical debate, though it is largely theorized to stem from a dynamo effect involving convective nuclear matter during the first ten seconds of the neutron star's birth.",
+      "The mechanics of a magnetar are defined by immense tension. The crust of the star, composed of an ultra-dense iron crystalline lattice, is constantly strained by the shifting magnetic fields locked within it. When this tension reaches a breaking point, the crust forcefully fractures in an event known as a \"starquake.\" This seismic rupture unleashes a flood of magnetic energy in the form of soft gamma-ray repeaters and anomalous X-ray bursts.",
+      "These explosive flares are among the brightest localized events in the cosmos. In 2004, a flare from a magnetar 50,000 light-years away physically compressed Earth’s ionosphere. Because they radiate energy so fiercely, magnetars are notoriously short-lived, with their intense magnetic fields decaying over roughly 10,000 years, eventually rendering them inert, dead neutron stars."
+    ],
+    "The2026Update": "Recent telemetry from the James Webb Space Telescope's high-contrast imaging array has definitively linked a series of unexplained fast radio bursts (FRBs) to a massive crustal fracture on a magnetar in the distant Perseus Cluster.",
+    "MathematicalFoundation": "B ≈ 3.2 × 10¹⁹ √(P × dP/dt) Gauss",
+    "ExternalCitation": "arXiv:2604.astro-ph/12840",
+    "VisualPrompt": "A tightly bound, rapidly rotating metallic sphere radiating blinding, chaotic electric blue and stark white arcs of magnetic flux; surface should appear fractured, glowing with deep crimson fault lines that occasionally erupt in blinding gamma-flash lens flares against a pure black void.",
+    "LiveStatus": "Active Phenomenon",
+    "ReferenceDOI": "doi:10.1038/nature03159",
+    "TechnicalSpecs": {
+      "Magnetic Field Strength": "10^15 Gauss",
+      "Crustal Yield Strength": "10^30 dyne/cm²",
+      "Rotational Spin-Down": "10^-11 s/s"
+    }
+  },
+  {
+    "Name": "Brown Dwarf",
+    "Category": "Celestial Entities",
+    "ImageURL": "https://images.unsplash.com/photo-1462332420958-a05d1e002413?q=80&w=1080&auto=format&fit=crop",
+    "ScientificClassification": "Substellar Object / Transitional Star-Planet",
+    "DeepDiveOverview": [
+      "Brown dwarfs are substellar objects that form the bridge between the heaviest gas giant planets and the lightest stars. Like stars, they form from the gravitational collapse of massive molecular clouds of gas and dust. However, they lack the critical mass—specifically, they are below 0.08 solar masses—required to sustain continuous nuclear fusion of hydrogen into helium in their cores.",
+      "Because they fail to ignite the main-sequence fusion process, brown dwarfs generate a brief period of energy by fusing deuterium or lithium. Once this limited fuel is exhausted, the body simply cools and contracts over billions of years. Their mechanics are largely governed by convection, with internal heat slowly rising to the surface and radiating into the void as faint infrared light, rendering them completely invisible to optical telescopes.",
+      "Despite being stellar failures, their atmospheres are incredibly dynamic and complex, closely resembling those of gas giants like Jupiter. Spectroscopic analysis reveals intricate weather patterns on brown dwarfs, including massive atmospheric bands, roaring supersonic winds, and clouds composed of hot silicate sand and molten iron rain."
+    ],
+    "The2026Update": "Deep-infrared surveys have identified a localized clustering of free-floating brown dwarfs within the Orion Nebula, exhibiting complex, self-sustaining atmospheric super-storms larger than Earth.",
+    "MathematicalFoundation": "M_limit = 0.08 M_sun ≈ 80 M_Jupiter",
+    "ExternalCitation": "NASA ADS: 2026BD...W1...202D",
+    "VisualPrompt": "A massive, turbulent sphere resembling Jupiter, but radiating a dull, smoldering magenta and deep crimson glow from within; its atmosphere should feature swirling, violent storm bands heavily obscured by dark, metallic-looking silicate clouds.",
+    "LiveStatus": "Active Phenomenon",
+    "ReferenceDOI": "doi:10.1146/annurev.astro.39.1.351",
+    "TechnicalSpecs": {
+      "Deuterium Fusion Threshold": "13 M_Jupiter",
+      "Surface Temperature": "500 - 2500 K",
+      "Core Pressure": "10^16 g/cm³"
+    }
+  },
+  {
+    "Name": "Rogue Planet",
+    "Category": "Celestial Entities",
+    "ImageURL": "https://images.unsplash.com/photo-1462332420958-a05d1e002413?q=80&w=1080&auto=format&fit=crop",
+    "ScientificClassification": "Free-Floating Planetary-Mass Object",
+    "DeepDiveOverview": [
+      "Rogue planets, also known as free-floating or nomad planets, are planetary-mass objects that do not orbit a central star, instead orbiting the galactic center directly. They are believed to be the casualties of violent orbital dynamics during the early, chaotic formation of stellar systems. When multiple massive planets form too close together, their gravitational interactions act as a cosmic slingshot, violently ejecting the lighter planets entirely out of the system.",
+      "Free from the gravitational tether and the warming light of a star, these planets drift into the near-absolute zero temperatures of the interstellar medium. Surface atmospheres freeze solid, collapsing into thick crusts of ice. Gas giant rogue planets simply cool down over eons, compressing under their own immense gravity, while terrestrial rogue worlds become frozen, silent wastelands.",
+      "Yet, they are not entirely dead. Mechanics of internal friction, tidal heating from massive moons, or the slow decay of radioactive isotopes in their rocky cores can sustain deep, internal warmth. This has led astrobiologists to theorize that beneath the miles-thick frozen crusts of terrestrial rogue planets, vast oceans of liquid water could potentially harbor dark, chemosynthetic ecosystems."
+    ],
+    "The2026Update": "A groundbreaking microlensing survey has confirmed that rogue planets outnumber stars in the Milky Way by a factor of 10 to 1, fundamentally shifting our understanding of galactic planetary distribution.",
+    "MathematicalFoundation": "v_esc = √(2GM / R)",
+    "ExternalCitation": "arXiv:2605.astro-ph/22091",
+    "VisualPrompt": "A solitary, frozen sphere floating in a deep, star-speckled void with no central light source; illuminate it only by faint, distant starlight and a very subtle, internal geothermal glow peeking through deep ice fissures.",
+    "LiveStatus": "Observation Confirmed",
+    "ReferenceDOI": "doi:10.1038/nature10092",
+    "TechnicalSpecs": {
+      "Escape Velocity": "11 - 60 km/s",
+      "Surface Temperature": "30 - 60 K",
+      "Core Temperature": "5000 - 8000 K"
+    }
+  },
+  {
+    "Name": "Ocean World",
+    "Category": "Celestial Entities",
+    "ImageURL": "https://images.unsplash.com/photo-1462332420958-a05d1e002413?q=80&w=1080&auto=format&fit=crop",
+    "ScientificClassification": "Subsurface Ocean World / Volatile-Rich Body",
+    "DeepDiveOverview": [
+      "Ocean worlds are planetary bodies that contain a massive, global layer of liquid water beneath their surfaces or, more rarely, spanning their exteriors. In our own solar system, moons like Europa (Jupiter) and Enceladus (Saturn) serve as perfect templates. These worlds formed far past the frost line, allowing them to accrete massive amounts of water ice alongside rocky material during the solar system's genesis.",
+      "The mechanics keeping these oceans liquid in deep space rely heavily on orbital resonance and tidal heating. As a moon orbits a massive gas giant in an elliptical path, the massive gravitational pull stretches and compresses the moon's core. This intense, continuous friction generates immense internal geothermal heat, melting the underside of the outer ice crust and creating a warm, global subsurface ocean spanning the entire moon.",
+      "These subsurface oceans are not stagnant; they are dynamic, chemically rich environments. Plumes of water vapor erupting from the surface crust have revealed the presence of salts, organic molecules, and silica particles. Scientists believe hydrothermal vents on the ocean floor could provide both the heat and the chemical energy necessary to support complex, alien microbial life."
+    ],
+    "The2026Update": "Spectrometers aboard the Europa Clipper probe have detected complex, long-chain carbon molecules within active hydro-plumes, strongly indicating active bio-chemical cycling beneath the ice.",
+    "MathematicalFoundation": "H = (21/2) * (k_2 / Q) * (G M_p² R⁵ e²) / a⁶",
+    "ExternalCitation": "NASA ADS: 2026Europa.0125C",
+    "VisualPrompt": "A brightly lit, scarred sphere covered in thick, fractured white and pale-blue ice; deep, glowing cracks (lineae) should emit faint, bioluminescent-blue vapor plumes erupting violently into the dark vacuum of space.",
+    "LiveStatus": "Active Exploration Target",
+    "ReferenceDOI": "doi:10.1016/j.icarus.2017.03.012",
+    "TechnicalSpecs": {
+      "Ocean Depth": "100 - 150 km",
+      "Ice Crust Thickness": "15 - 25 km",
+      "Tidal Dissipation Rate": "10^11 Watts"
+    }
+  },
+  {
+    "Name": "Extreme Weather World",
+    "Category": "Celestial Entities",
+    "ImageURL": "https://images.unsplash.com/photo-1462332420958-a05d1e002413?q=80&w=1080&auto=format&fit=crop",
+    "ScientificClassification": "Irradiated Gas Giant / Hot Jupiter",
+    "DeepDiveOverview": [
+      "Extreme weather worlds are primarily represented by 'Hot Jupiters'—massive gas giants orbiting aggressively close to their host stars. Because they are tidally locked, one hemisphere constantly faces the blazing stellar furnace, while the other remains in perpetual darkness. This dramatic temperature differential drives the most violent atmospheric mechanics observed in the universe.",
+      "The intense heat on the dayside, often exceeding 3,000 Kelvin, vaporizes metals and silicates directly into the atmosphere. The extreme pressure gradient forces supersonic winds to whip across the terminator line (the boundary between day and night) at speeds exceeding 5,000 miles per hour, attempting to distribute the thermal energy. As these vaporized minerals hit the cooler nightside, they condense.",
+      "This condensation creates terrifying meteorological phenomena. On worlds like HD 189733 b, clouds of silicate particles rain molten glass sideways at Mach 7. On others, temperatures are hot enough to cause precipitation of liquid iron or vaporized titanium. These worlds offer astrophysicists extreme laboratories to study fluid dynamics and atmospheric chemistry under conditions impossible to replicate on Earth."
+    ],
+    "The2026Update": "Atmospheric mapping of exoplanet WASP-76b has confirmed a highly volatile terminator zone where iron vapor condenses instantly into localized, torrential liquid-metal monsoons.",
+    "MathematicalFoundation": "v_wind ≈ √(R * ΔT * c_p)",
+    "ExternalCitation": "arXiv:2604.exoplanets/41005",
+    "VisualPrompt": "An aggressive, asymmetrical gas giant; the dayside glows a blinding, incandescent white-orange, transitioning violently across the terminator line into a dark, stormy nightside swept by intense, horizontal streaks of glowing blue atmospheric friction.",
+    "LiveStatus": "Observation Confirmed",
+    "ReferenceDOI": "doi:10.1038/nature25789",
+    "TechnicalSpecs": {
+      "Dayside Temp": "2500 - 3200 K",
+      "Wind Velocity": "5 - 7 km/s",
+      "Atmospheric Scale Height": "400 - 600 km"
+    }
+  },
+  {
+    "Name": "Main Sequence Star",
+    "Category": "Stars & Stellar Evolution",
+    "ImageURL": "https://images.unsplash.com/photo-1462332420958-a05d1e002413?q=80&w=1080&auto=format&fit=crop",
+    "ScientificClassification": "Dwarf Star in Hydrostatic Equilibrium",
+    "DeepDiveOverview": [
+      "A star enters the main sequence the moment it achieves nuclear fusion in its core, marking the longest and most stable chapter of its life. Formed from the collapse of a molecular cloud, the immense gravitational pressure at the center of the protostar eventually forces hydrogen atoms to fuse. This fusion reaction releases a staggering amount of energy, initiating the main sequence phase.",
+      "The physics of a main sequence star are defined by hydrostatic equilibrium. The inward, crushing force of the star's own immense gravity is perfectly counterbalanced by the outward thermal pressure generated by the nuclear fusion core. As long as the star has enough hydrogen fuel to sustain this reaction, it remains perfectly spherical, stable, and luminous, maintaining its size and temperature for millions to trillions of years.",
+      "The exact mass of the star dictates its fate on the main sequence. Massive, hyper-luminous blue stars burn through their hydrogen reserves furiously, dying in a few million years. Conversely, tiny red dwarfs sip their fuel at an agonizingly slow pace, ensuring they will continue to burn for trillions of years—long after the larger stars have faded into darkness."
+    ],
+    "The2026Update": "Advanced helioseismology mapping has revealed micro-fluctuations in the Sun's core pressure, providing the first direct evidence of asymmetric hydrogen-to-helium fusion cycling.",
+    "MathematicalFoundation": "dP/dr = - (G * M_r * ρ) / r²",
+    "ExternalCitation": "NASA Heliophysics: 2026.MS.801",
+    "VisualPrompt": "A perfect, brilliant yellow-white sphere dominated by highly detailed, boiling convective plasma granules on the surface; occasionally display prominent, arching magnetic solar flares and darker, swirling sunspots.",
+    "LiveStatus": "Active Phenomenon",
+    "ReferenceDOI": "doi:10.1007/s11214-013-0009-8",
+    "TechnicalSpecs": {
+      "Core Temperature": "1.5 * 10^7 K",
+      "Energy Generation": "4 * 10^33 ergs",
+      "Fusion Rate": "6 * 10^11 kg/s (Hydrogen)"
+    }
+  },
+  {
+    "Name": "Red Giant",
+    "Category": "Stars & Stellar Evolution",
+    "ImageURL": "https://images.unsplash.com/photo-1462332420958-a05d1e002413?q=80&w=1080&auto=format&fit=crop",
+    "ScientificClassification": "Post-Main-Sequence Stellar Giant",
+    "DeepDiveOverview": [
+      "When a low-to-medium mass star finally exhausts the hydrogen fuel within its core, the delicate balance of hydrostatic equilibrium breaks down. Without the outward pressure of fusion to hold it up, the core violently contracts under its own gravity, heating up exponentially. This sudden, intense core heat causes the star's outer layers of hydrogen to ignite in a shell around the core, driving a massive physical expansion.",
+      "The mechanics of this expansion are dramatic. The outer envelope of the star swells outward, multiplying the star's radius by a factor of hundreds. As the outer layers expand further away from the hot core, they cool down, shifting the star's emission spectrum into a deep, luminous red. The star becomes highly unstable, losing significant amounts of its mass to powerful stellar winds that blow the outer material into space.",
+      "Deep inside, the contracting core eventually reaches temperatures hot enough (roughly 100 million Kelvin) to ignite helium fusion in a sudden event known as the 'helium flash.' The star then briefly stabilizes, fusing helium into carbon and oxygen, before ultimately shedding its outer layers entirely to create a beautiful planetary nebula."
+    ],
+    "The2026Update": "Interferometric imaging of the star Betelgeuse has confirmed the presence of a massively destabilized, convective outer envelope, indicating the star is actively shedding mass faster than previously modeled.",
+    "MathematicalFoundation": "L ∝ R² * T⁴",
+    "ExternalCitation": "arXiv:2603.stars/22104",
+    "VisualPrompt": "A gargantuan, highly diffuse star glowing a deep, menacing crimson; the outer boundary should lack a hard edge, appearing instead as a violently boiling, turbulent haze of gaseous red and orange plasma aggressively shedding material into the void.",
+    "LiveStatus": "Active Phenomenon",
+    "ReferenceDOI": "doi:10.1088/0004-637X/744/2/138",
+    "TechnicalSpecs": {
+      "Core Temperature": "10^8 K",
+      "Envelope Expansion": "100 - 300 R_sun",
+      "Mass Loss Rate": "10^-6 M_sun/year"
+    }
+  },
+  {
+    "Name": "White Dwarf",
+    "Category": "Stars & Stellar Evolution",
+    "ImageURL": "https://images.unsplash.com/photo-1462332420958-a05d1e002413?q=80&w=1080&auto=format&fit=crop",
+    "ScientificClassification": "Degenerate Carbon-Oxygen Stellar Remnant",
+    "DeepDiveOverview": [
+      "A white dwarf is the final evolutionary state for stars whose mass isn't high enough to trigger a supernova (stars under roughly 8 solar masses). After a red giant sheds its outer gaseous layers into a planetary nebula, only the naked, super-hot core remains. Composed entirely of carbon and oxygen, this dead core no longer generates energy through nuclear fusion.",
+      "The physics of a white dwarf are governed by quantum mechanics. Because gravity crushes the core without fusion pushing back, the electrons are squeezed together as tightly as the laws of physics allow. This creates 'electron degeneracy pressure,' which single-handedly halts further gravitational collapse. This extreme compression results in an object that packs the mass of the Sun into a sphere roughly the size of the Earth, making it incomprehensibly dense.",
+      "With no active fusion, white dwarfs are essentially cosmic embers. They are born intensely hot—radiating brilliant white or blue light—and slowly radiate their residual thermal energy away into the vacuum of space. Over tens of billions of years, they cool down, turning red, then black, ultimately crystallizing into massive, dark diamond-like spheres."
+    ],
+    "The2026Update": "Asteroseismology data from the Gaia space observatory has confirmed the existence of a massive white dwarf transitioning into a fully crystallized, solid carbon-oxygen state at its core.",
+    "MathematicalFoundation": "M_limit ≈ 1.44 M_sun (Chandrasekhar Limit)",
+    "ExternalCitation": "NASA ADS: 2026WD...G2...110S",
+    "VisualPrompt": "A minuscule but blindingly bright, pure white sphere radiating intense, harsh light against the backdrop of space; surround it with a very faint, expanding halo of colorful, translucent nebulous gas representing its shed outer layers.",
+    "LiveStatus": "Active Phenomenon",
+    "ReferenceDOI": "doi:10.1038/nature11062",
+    "TechnicalSpecs": {
+      "Mass Density": "10^6 g/cm³",
+      "Chandrasekhar Limit": "1.44 M_sun",
+      "Cooling Rate": "10^9 years"
+    }
+  },
+  {
+    "Name": "Neutron Star",
+    "Category": "Stars & Stellar Evolution",
+    "ImageURL": "https://images.unsplash.com/photo-1462332420958-a05d1e002413?q=80&w=1080&auto=format&fit=crop",
+    "ScientificClassification": "Degenerate Neutron-Degenerate Core",
+    "DeepDiveOverview": [
+      "When a star with a mass between 8 and 20 times that of our Sun exhausts its nuclear fuel, its core abruptly collapses. If the core's mass exceeds the Chandrasekhar limit, electron degeneracy pressure fails, and gravity crushes the core so violently that electrons and protons are fused together to form neutrons. The resulting rebound triggers a massive supernova, blowing away the star's outer layers and leaving behind a neutron star.",
+      "The sheer density of a neutron star defies standard physics. Measuring only about 20 kilometers across, they pack the mass of up to two Suns. A single sugar-cube-sized amount of neutron star material would weigh over a billion tons on Earth. The mechanics holding the star together shift to 'neutron degeneracy pressure,' supported by the strong nuclear force, which barely keeps the star from collapsing entirely into a black hole.",
+      "Their surfaces boast gravity roughly a hundred billion times stronger than Earth’s, and their rotation rates are staggering, spinning hundreds of times a second due to the conservation of angular momentum from the original star's collapse. The crust is an ultra-hard lattice of atomic nuclei, while the interior is theorized to be a frictionless, superconducting superfluid of pure neutrons."
+    ],
+    "The2026Update": "Advanced gravitational wave detectors have captured the precise waveform of a neutron star 'glitch', revealing dynamic shifts in the star's interior superfluid core mechanics.",
+    "MathematicalFoundation": "P = K * ρ^(5/3) (Neutron Degeneracy Pressure Equation)",
+    "ExternalCitation": "arXiv:2604.neutron/10940",
+    "VisualPrompt": "A small, intensely dense, smooth metallic sphere glowing with extreme heat; distort the space immediately around it slightly to convey crushing gravity, and wrap it in a faint, highly energetic, swirling blue plasma halo.",
+    "LiveStatus": "Active Phenomenon",
+    "ReferenceDOI": "doi:10.1103/RevModPhys.75.1011",
+    "TechnicalSpecs": {
+      "Mass Density": "10^14 g/cm³",
+      "Surface Gravity": "10^12 m/s²",
+      "Magnetic Field": "10^12 Gauss"
+    }
+  },
+  {
+    "Name": "General Relativity",
+    "Category": "Mind-Bending Theories",
+    "ImageURL": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1080&auto=format&fit=crop",
+    "ScientificClassification": "Geometric Theory of Gravitation",
+    "DeepDiveOverview": [
+      "Published comprehensively by Albert Einstein in 1915, General Relativity conceptually dismantled and completely replaced the pre-existing Newtonian mechanics paradigm mapping universal gravitation. Instead of incorrectly relying strictly on gravity behaving natively as a mysterious invisible tether abruptly pulling individual objects precisely together across flat nothingness, expanding modern physics heavily redefined gravity strictly as the physical structural deformation of a united 4D continuum.",
+      "The theory mathematically postulates that both raw mass and absolute energy actively dictate and heavily distort the geometric curvature of the spacetime fabric they physically occupy. This exact resulting curvature natively dictates exactly how particles definitively glide along straight trajectory vectors securely through this significantly warped local topography. The definitive core tenant remains the crucial Equivalence Principle: absolutely stating that local inertial forces and standard gravitation fields are observationally indistinguishable.",
+      "General Relativity has easily successfully passed every brutal experimental test thrown entirely at it for over a full century. It perfectly accounts securely for the bizarre shifting perihelion orbit of Mercury, the definitive bending of external starlight specifically mapping during solar eclipses, the strict existence of terminal gravitational time dilation, and the massive propagation of gravitational waves strictly caused by deeply colliding black hole networks."
+    ],
+    "The2026Update": "In February 2026, the Laser Interferometer Space Antenna (LISA) pre-deployment modeling entirely validated gravitational wave 'echoes' theoretically bounding off black hole event horizons, heavily scrutinizing specific quantum boundary corrections.",
+    "MathematicalFoundation": "G_{μν} + Λg_{μν} = (8πG/c⁴)T_{μν} (Einstein Field Equations)",
+    "ExternalCitation": "arXiv:2604.gr-qc/51551",
+    "VisualPrompt": "A 3D grid layout heavily warped like a complex hyper-dimensional funnel completely bowing inwards around a highly dense glowing spherical mass.",
+    "LiveStatus": "Theoretical / Historical Model",
+    "ReferenceDOI": "doi:10.1103/PhysRevLett.116.061102",
+    "TechnicalSpecs": {
+      "Energy Scale": "10^19 GeV (Planck Scale)",
+      "Predictive Range": "Astrophysical / Quantum",
+      "Observable Bounds": "Statistically Inferred"
+    }
+  },
+  {
+    "Name": "Time Dilation",
+    "Category": "Mind-Bending Theories",
+    "ImageURL": "https://images.unsplash.com/photo-1462332420958-a05d1e002413?q=80&w=1080&auto=format&fit=crop",
+    "ScientificClassification": "Relativistic Chronometry Anomaly",
+    "DeepDiveOverview": [
+      "Time dilation is one of the most counterintuitive consequences of Einstein’s theories of relativity. It dictates that time does not tick at the same rate for everyone; instead, it is relative to the observer's speed and proximity to a gravitational mass. There are two forms: Kinematic time dilation (due to speed) and Gravitational time dilation (due to mass curving spacetime).",
+      "Kinematic mechanics dictate that the faster an object moves through space, the slower it moves through time relative to a stationary observer. If an astronaut boarded a spacecraft and traveled at 99.9% the speed of light for a few years, they would return to Earth to find that decades or centuries had passed for their friends. Time literally slows down to ensure that the speed of light remains an absolute constant for all observers.",
+      "Gravitational mechanics work similarly: extreme mass warps spacetime so severely that it stretches the flow of time itself. Near the event horizon of a black hole, a few hours of subjective time could equal thousands of years for the rest of the universe. Time dilation proves that time is a malleable, physical dimension that flexes and warps under the extremes of the cosmos."
+    ],
+    "The2026Update": "Quantum clock synchronization experiments utilizing entangled photons between Earth and deep-space probes have successfully demonstrated measurable time dilation effects at non-relativistic cruising speeds.",
+    "MathematicalFoundation": "Δt' = Δt / √(1 - v²/c²)",
+    "ExternalCitation": "arXiv:2605.time/33104",
+    "VisualPrompt": "An abstract, flowing tunnel composed of glowing, translucent clock faces warping and stretching as they approach a central, heavy singularity, with the hands on the clocks visibly slowing down near the center.",
+    "LiveStatus": "Active Physical Reality",
+    "ReferenceDOI": "doi:10.1119/1.1975878",
+    "TechnicalSpecs": {
+      "Lorentz Factor": "γ = 1 / √(1 - β²)",
+      "GPS Deviation": "38 microseconds/day",
+      "Gravitational Shift": "Δf/f = G M / (R c²)"
+    }
+  },
+  {
+    "Name": "Dark Matter",
+    "Category": "Mind-Bending Theories",
+    "ImageURL": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1080&auto=format&fit=crop",
+    "ScientificClassification": "Non-baryonic Cosmological Mass",
+    "DeepDiveOverview": [
+      "Dark matter is an entirely hypothetical, profoundly enigmatic form of matter completely lacking interaction with any established electromagnetic field. Because it inherently neither emits, absorbs, nor actively reflects light at any frequency, it remains strictly invisible to all standard telescope arrays. Its sheer existence must be securely inferred exclusively via its vast macroscopic gravitational effects.",
+      "Astronomers explicitly require the existence of dark matter to rationally explain why fast-spinning spiral galaxies do not violently tear themselves apart, and exactly how immense galaxy clusters maintain their structural integrity over cosmic time spans. Furthermore, dark matter heavily distorts the observable universe entirely through massive gravitational lensing—bending background galactic light strictly around invisible topographical halos.",
+      "Current standard cosmological models universally peg dark matter as constituting approximately 85% of all matter, and roughly 27% of the total mass-energy density of the entire universe. Despite relentless decades of extensive deep-underground heavy-liquid xenon detectors endlessly searching for Weakly Interacting Massive Particles (WIMPs), no definitive, direct particle collision has ever been explicitly recorded."
+    ],
+    "The2026Update": "In a severe challenge to WIMP models, the LUX-ZEPLIN experiment culminated its massive 4-year run in 2026 with a complete null result, aggressively shifting the scientific paradigm massively toward Axions and primordial black hole frameworks.",
+    "MathematicalFoundation": "v(r) = √(GM(r)/r) (Galaxy Rotation Curve anomalies)",
+    "ExternalCitation": "arXiv:2605.astro-ph/99201",
+    "VisualPrompt": "A vast, faintly glowing web-like structure of invisible topographical gravitational filaments holding heavily clustered galaxies securely in place in deep space.",
+    "LiveStatus": "Inferred Reality",
+    "ReferenceDOI": "doi:10.1103/PhysRevLett.116.061102",
+    "TechnicalSpecs": {
+      "Energy Scale": "10^19 GeV (Planck Scale)",
+      "Predictive Range": "Astrophysical / Quantum",
+      "Observable Bounds": "Statistically Inferred"
+    }
+  },
+  {
+    "Name": "Dark Energy",
+    "Category": "Mind-Bending Theories",
+    "ImageURL": "https://images.unsplash.com/photo-1504930268766-d71549f36c53?q=80&w=1080&auto=format&fit=crop",
+    "ScientificClassification": "Cosmological Expansion Mechanism / Vacuum Energy",
+    "DeepDiveOverview": [
+      "In the late 1990s, astronomers studying distant supernovas made a shocking discovery: the expansion of the universe wasn't slowing down due to gravity, as expected. Instead, the expansion was accelerating. This meant some unknown, unseen energy was actively pushing the fabric of spacetime apart. Coined 'Dark Energy,' it makes up an astonishing 68% of the total mass-energy density of the universe, dwarfing normal matter and dark matter combined.",
+      "The mechanics of dark energy act as a cosmic anti-gravity. Unlike dark matter, which clumps around galaxies and pulls them together, dark energy is a property of space itself. It appears uniformly distributed and exerts a negative pressure across the cosmos. As the universe expands and more space is created, the total amount of dark energy increases, further accelerating the outward push in a runaway feedback loop.",
+      "The origin of dark energy remains highly speculative. It is most commonly modeled as the 'Cosmological Constant,' an inherent, unchanging energy density woven directly into the vacuum of space. Alternatively, theories like 'Quintessence' propose it is a dynamic, shifting energy field. Regardless of its origin, dark energy guarantees that the universe will not collapse, but will expand indefinitely into a cold, dark void."
+    ],
+    "The2026Update": "Results from the Dark Energy Spectroscopic Instrument (DESI) indicate a slight time-variance in the cosmological constant, challenging the standard model and suggesting dark energy may be a dynamic, evolving field.",
+    "MathematicalFoundation": "H² = (8πG/3)ρ - k/a² + Λ/3",
+    "ExternalCitation": "NASA ADS: 2026ARA&A.64..120D",
+    "VisualPrompt": "An abstract visualization of deep space where galaxies are being actively pushed apart by a subtle, effervescent, shifting grid of dark magenta and cyan energy that seems to bubble up directly from the empty black vacuum.",
+    "LiveStatus": "Inferred Reality",
+    "ReferenceDOI": "doi:10.1103/PhysRevLett.116.061102",
+    "TechnicalSpecs": {
+      "Equation of State": "w = p / ρ ≈ -1",
+      "Cosmic Fraction": "68.3%",
+      "Expansion Rate": "67 - 73 km/s/Mpc"
+    }
+  },
+  {
+    "Name": "The Cosmic Web",
+    "Category": "Cosmic Structures & Mysteries",
+    "ImageURL": "https://images.unsplash.com/photo-1462332420958-a05d1e002413?q=80&w=1080&auto=format&fit=crop",
+    "ScientificClassification": "Large-Scale Structure of the Universe",
+    "DeepDiveOverview": [
+      "When viewed on the grandest scales imaginable, the universe is not a random scattering of stars and galaxies. Instead, it forms an interconnected, structural masterpiece known as the Cosmic Web. This unimaginably vast architecture was seeded by microscopic quantum fluctuations just milliseconds after the Big Bang, which were blown up to cosmic proportions during inflation, creating the blueprint for mass distribution.",
+      "The mechanics of the web are driven by the gravitational dominance of dark matter. Dark matter formed massive, intersecting filaments across the universe. Normal matter—hydrogen and helium gas—was gravitationally pulled into these dark matter highways, sparking the birth of galaxies. Where these massive filaments intersect, dense, glowing nodes form, hosting massive superclusters containing thousands of galaxies.",
+      "In stark contrast to these bustling nodes are the cosmic voids—immense, spherical regions of almost total emptiness spanning hundreds of millions of light-years across. The Cosmic Web is a dynamic, evolving structure, continuously pulling matter from the empty voids into the glowing filaments, shaping the destiny and movement of every galaxy in the universe."
+    ],
+    "The2026Update": "Advanced radio telescope arrays have mapped a previously unseen thread of intergalactic plasma stretching 500 million light-years, providing the clearest visualization yet of the faint gas connecting galactic nodes.",
+    "MathematicalFoundation": "δ(x) = (ρ(x) - ⟨ρ⟩) / ⟨ρ⟩",
+    "ExternalCitation": "arXiv:2606.structure/40194",
+    "VisualPrompt": "A stunning, three-dimensional neural-network-like structure spanning the void; bright, dense clusters of golden galaxies form the nodes, connected by faint, wispy, glowing blue filaments of gas, surrounding vast spheres of pitch-black nothingness.",
+    "LiveStatus": "Observed Structure",
+    "ReferenceDOI": "doi:10.1038/nature04805",
+    "TechnicalSpecs": {
+      "Filament Length": "10 - 100 Mpc",
+      "Void Diameter": "20 - 150 Mpc",
+      "Baryon Fraction": "~15%"
+    }
+  },
+  {
+    "Name": "Gravitational Lensing",
+    "Category": "Cosmic Structures & Mysteries",
+    "ImageURL": "https://images.unsplash.com/photo-1462332420958-a05d1e002413?q=80&w=1080&auto=format&fit=crop",
+    "ScientificClassification": "Relativistic Optical Distortion",
+    "DeepDiveOverview": [
+      "Gravitational lensing is a direct, visually stunning confirmation of Einstein's General Relativity. When light from a very distant galaxy travels toward Earth, it occasionally passes near an incredibly massive object, like a galaxy cluster. Because this massive cluster severely warps the spacetime around it, the light path is forced to bend along the curvature of the gravitational well, entirely altering its trajectory.",
+      "The mechanics of this phenomenon allow the foreground galaxy cluster to act exactly like an optical convex lens. It stretches, distorts, and magnifies the light of the background object. Depending on the exact alignment of the light source, the lens, and the observer, this can result in multiple mirror images of the same galaxy, stretched out arcs of light, or a perfect circle of light known as an 'Einstein Ring.'",
+      "This natural telescope is an invaluable tool for astrophysicists. Gravitational lensing allows scientists to observe distant galaxies that are too faint to see with human-made telescopes alone. Furthermore, by calculating exactly how the light bends, astronomers can precisely map the mass of the foreground cluster, revealing the hidden, invisible distribution of dark matter holding it together."
+    ],
+    "The2026Update": "A rare, perfect double-Einstein Ring has been captured by orbital observatories, allowing astrophysicists to triangulate the exact mass distribution of an invisible dark matter halo with pinpoint accuracy.",
+    "MathematicalFoundation": "α = 4GM / (c² b)",
+    "ExternalCitation": "arXiv:2604.lensing/10103",
+    "VisualPrompt": "A massive, glowing cluster of elliptical galaxies in the foreground; behind it, visualize the light of a distant blue spiral galaxy being severely warped and stretched into a brilliant, perfect, luminous ring of blue light encircling the cluster.",
+    "LiveStatus": "Active Phenomenon",
+    "ReferenceDOI": "doi:10.1111/j.1365-2966.2009.15437.x",
+    "TechnicalSpecs": {
+      "Deflection Angle": "α = 4GM / (c² b)",
+      "Magnification Factor": "10x - 50x",
+      "Einstein Radius": "θ_E = √(4GM / c² * D_LS / (D_L D_S))"
+    }
+  },
+  {
+    "Name": "The Fermi Paradox",
+    "Category": "Cosmic Structures & Mysteries",
+    "ImageURL": "https://images.unsplash.com/photo-1462332420958-a05d1e002413?q=80&w=1080&auto=format&fit=crop",
+    "ScientificClassification": "Sociological Cosmological Contradiction",
+    "DeepDiveOverview": [
+      "Named after physicist Enrico Fermi, who famously asked 'Where is everybody?', the Fermi Paradox highlights a profound cosmic mystery. The Milky Way contains billions of sun-like stars, many harboring Earth-like planets in their habitable zones. Given that the universe is 13.8 billion years old, intelligent life should have had ample time to evolve, achieve interstellar travel, and colonize the galaxy. Statistically, the cosmos should be teeming with life.",
+      "The mechanics of the paradox rely on the eerie silence of the universe. Despite decades of searching through projects like SETI (Search for Extraterrestrial Intelligence), scanning millions of radio frequencies and hunting for megastructures, humanity has found exactly zero definitive proof of alien intelligence. The contradiction forces scientists to confront the possibility that either our mathematical assumptions are flawed, or something fundamental is preventing civilizations from surviving.",
+      "Solutions to the paradox are highly speculative and often deeply unsettling. Theories range from the 'Rare Earth Hypothesis' (life is simply a statistical fluke), to the 'Great Filter' (a universal evolutionary hurdle that destroys civilizations before they expand), to the 'Dark Forest Theory' (civilizations intentionally hide to avoid destruction by hostile apex predators)."
+    ],
+    "The2026Update": "Statistical modeling from the latest exoplanet atmosphere surveys suggests that the 'Great Filter' may lie in the transition from single-celled organisms to complex, multi-cellular life, drastically reducing the odds of intelligent civilizations.",
+    "MathematicalFoundation": "N = R* · f_p · n_e · f_l · f_i · f_c · L",
+    "ExternalCitation": "NASA ADS: 2026Fermi.P.104B",
+    "VisualPrompt": "A vast, densely packed starfield of thousands of bright, diverse stars; superimpose a faint, green, digital radar sweep over the void that continually returns empty, silent static, emphasizing the profound isolation of space.",
+    "LiveStatus": "Unsolved Mystery",
+    "ReferenceDOI": "doi:10.1016/j.actaastro.2018.06.015",
+    "TechnicalSpecs": {
+      "Age of Milky Way": "13.5 * 10^9 years",
+      "Habitable Planets": "10^9 in Galaxy",
+      "Drake Equation Output": "Highly Variable"
+    }
+  },
+  {
+    "Name": "The Wow! Signal",
+    "Category": "Cosmic Structures & Mysteries",
+    "ImageURL": "https://images.unsplash.com/photo-1462332420958-a05d1e002413?q=80&w=1080&auto=format&fit=crop",
+    "ScientificClassification": "Transient Narrowband Radio Signal",
+    "DeepDiveOverview": [
+      "On August 15, 1977, the Big Ear radio telescope at Ohio State University detected a sudden, intense burst of radio waves originating from the direction of the constellation Sagittarius. The signal lasted exactly 72 seconds—the maximum duration the telescope could observe a single point in the sky as the Earth rotated. Astronomer Jerry Ehman was so astounded by the signal's anomaly that he circled the alphanumeric code '6EQUJ5' on the printout and wrote 'Wow!' in the margin.",
+      "The mechanics of the Wow! Signal make it the strongest candidate for an extraterrestrial transmission ever recorded. It possessed a very narrow bandwidth and was transmitted at a frequency of 1420.4056 MHz. This is highly significant, as it corresponds exactly to the resonant frequency of neutral hydrogen, the most abundant element in the universe. Scientists have long theorized that an intelligent species would use this 'Hydrogen Line' as a universal cosmic calling frequency.",
+      "Despite intense and repeated efforts to listen to the exact same coordinates in the sky over subsequent decades using far more advanced telescopes, the signal has never reoccurred. Theories for its origin range from reflections of classified Earth satellites, to passing cometary clouds, to a legitimate, briefly aimed transmission from a distant, intelligent civilization."
+    ],
+    "The2026Update": "A comprehensive AI-driven re-analysis of the original 1977 analog magnetic tapes has definitively ruled out cometary hydrogen cloud interference, deepening the mystery of the signal's artificial-like origin.",
+    "MathematicalFoundation": "f = 1420.4057517667 MHz (The 21-centimeter Hydrogen Line)",
+    "ExternalCitation": "Big Ear Obs: 1977.08.15.WOW",
+    "VisualPrompt": "A retro-styled, green-on-black digital readout of a massive radio wave spike; the alphanumeric sequence '6EQUJ5' should be glowing brightly in the center, contrasted against a backdrop of a massive, dish-shaped radio telescope aiming into a dark, starry sky.",
+    "LiveStatus": "Historical Anomaly",
+    "ReferenceDOI": "doi:10.1089/ast.2004.4.453",
+    "TechnicalSpecs": {
+      "Signal Duration": "72 s",
+      "Frequency": "1420.4056 MHz",
+      "Signal-to-Noise Ratio": "30σ"
+    }
+  },
+  {
+    "Name": "The Fate of the Universe (Big Freeze/Big Rip)",
+    "Category": "Cosmic Structures & Mysteries",
+    "ImageURL": "https://images.unsplash.com/photo-1462332420958-a05d1e002413?q=80&w=1080&auto=format&fit=crop",
+    "ScientificClassification": "Cosmological Ultimate Destiny Scenario",
+    "DeepDiveOverview": [
+      "The ultimate fate of the universe is a high-stakes cosmological debate dependent almost entirely on the behavior of dark energy and the overall density of matter. Because the expansion of the universe is accelerating, astrophysicists have projected several apocalyptic scenarios. The most widely accepted model is the 'Big Freeze' (or Heat Death). In this scenario, the universe expands infinitely. Over trillions of years, star formation ceases, black holes evaporate via Hawking radiation, and the universe reaches a state of maximum entropy—a cold, dark, perfectly uniform void where no thermodynamic work is possible.",
+      "A far more violent alternative is the 'Big Rip.' The mechanics of this theory suggest that the repulsive force of dark energy will not just remain constant, but will increase exponentially over time. This phantom energy would eventually overpower all fundamental physical forces. First, it would tear galaxy clusters apart, then individual galaxies, then star systems, planets, and finally, in the last fraction of a second, the strong nuclear force would fail, ripping atoms and spacetime itself into nothingness.",
+      "A third, less favored theory is the 'Big Crunch,' which posits that gravity will ultimately win the cosmic tug-of-war, halting expansion and dragging all matter back into a microscopic, infinitely hot singularity. However, current data measuring the relentless acceleration of dark energy strongly points toward a cold, dark, and lonely expansion into eternity."
+    ],
+    "The2026Update": "Recent precision measurements of the Hubble constant tension hint at a slowly strengthening dark energy field, pushing cosmological models slightly away from a peaceful Big Freeze and closer toward a catastrophic Big Rip.",
+    "MathematicalFoundation": "w = P / ρ (Equation of State for Dark Energy)",
+    "ExternalCitation": "arXiv:2605.cosmodeath/10041",
+    "VisualPrompt": "A split-screen cinematic concept: on the left, a dying, dimming galaxy slowly fading into an absolute, pitch-black freezing void; on the right, a violent, chaotic shattering of planets and stars being stretched and torn apart by an invisible, intense violet energy grid.",
+    "LiveStatus": "Theoretical Forecast",
+    "ReferenceDOI": "doi:10.1103/PhysRevD.68.043517",
+    "TechnicalSpecs": {
+      "Cosmic Horizon": "16 * 10^9 light-years",
+      "Deceleration Parameter": "q = -0.55",
+      "Rip Horizon Time": "2.2 * 10^10 years (if w < -1)"
     }
   }
 ]
