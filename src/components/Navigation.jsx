@@ -8,7 +8,7 @@ import AboutModal from './AboutModal';
 
 export default function Navigation() {
   const pathname = usePathname();
-  const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
 
   const isActive = (path) => pathname === path || (path !== '/' && pathname?.startsWith(path));
 
@@ -47,7 +47,7 @@ export default function Navigation() {
 
         {/* Profile Avatar Placeholder */}
         <div className="p-6 border-t border-[#102A50] shadow-[0_-4px_20px_rgba(0,0,0,0.2)]">
-          <div className="flex items-center gap-4 cursor-pointer group" onClick={() => setIsAboutModalOpen(true)}>
+          <div className="flex items-center gap-4 cursor-pointer group" onClick={() => setIsAboutOpen(true)}>
             <div className="w-10 h-10 rounded-full bg-[#00E5FF]/10 border-2 border-[#00E5FF]/40 group-hover:border-[#00E5FF] transition-colors flex items-center justify-center overflow-hidden shrink-0 shadow-[0_0_10px_rgba(0,229,255,0.2)]">
                <User className="w-5 h-5 text-[#00E5FF] group-hover:text-white transition-colors" />
             </div>
@@ -65,7 +65,7 @@ export default function Navigation() {
           <Telescope className="w-6 h-6 text-[#00E5FF] drop-shadow-[0_0_8px_rgba(0,229,255,0.8)]" />
           <span className="text-sm font-bold tracking-widest text-white uppercase truncate max-w-[80px]">AstroAid</span>
         </div>
-        <div className="flex items-center gap-3 cursor-pointer group" onClick={() => setIsAboutModalOpen(true)}>
+        <div className="flex items-center gap-3 cursor-pointer group" onClick={() => setIsAboutOpen(true)}>
             <div className="flex flex-col overflow-hidden text-right">
               <span className="text-white text-[10px] font-bold uppercase tracking-wider group-hover:text-[#00E5FF] transition-colors truncate">Harit Ghetiya</span>
               <span className="text-[#AAAAAA] text-[8px] font-mono group-hover:text-[#00E5FF]/80 transition-colors truncate">Diploma in Computer Eng.</span>
@@ -93,7 +93,7 @@ export default function Navigation() {
         })}
       </nav>
 
-      <AboutModal isOpen={isAboutModalOpen} onClose={() => setIsAboutModalOpen(false)} />
+      <AboutModal isOpen={isAboutOpen} onClose={() => setIsAboutOpen(false)} />
     </>
   );
 }
