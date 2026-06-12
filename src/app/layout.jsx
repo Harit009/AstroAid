@@ -1,19 +1,18 @@
-import Navigation from '../components/Navigation';
+import DashboardShell from '../components/DashboardShell';
 import './globals.css';
 
 export const metadata = {
-  title: 'AstroAid App',
-  description: 'Explore the universe.',
+  title: 'AstroAid — Astronomical Intelligence',
+  description: 'Real-time planetary science telemetry and deep-space monitoring dashboard powered by the NASA Open API.',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="text-[#FFFFFF] antialiased overflow-x-hidden min-h-screen" suppressHydrationWarning>
-        <Navigation />
-        <main className="w-full md:pl-[260px] pb-20 md:pb-0 relative z-0">
+        <DashboardShell>
           {children}
-        </main>
+        </DashboardShell>
       </body>
     </html>
   );

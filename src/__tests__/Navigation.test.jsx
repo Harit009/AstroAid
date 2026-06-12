@@ -8,47 +8,40 @@ jest.mock('next/navigation', () => ({
   usePathname: () => '/',
 }));
 
-describe('Navigation & About Section Modal Integration', () => {
-  it('Test Case 1 (Initial State): Modal is completely hidden from the DOM on mount', () => {
-    render(<Navigation />);
-    
-    // The modal's unique content should not exist in the DOM initially
-    expect(screen.queryByText(/About The App/i)).not.toBeInTheDocument();
+describe('Navigation — Profile Click Callback', () => {
+  it('Test Case 1: Profile card is present on initial render', () => {
+    render(<Navigation onProfileClick={() => {}} />);
+    // Both desktop + mobile render the name — at least one should be in the DOM
+    expect(screen.getAllByText('Harit Ghetiya').length).toBeGreaterThan(0);
   });
 
-  it('Test Case 2 (Trigger Validation): Modal overlay and contact links render successfully on profile click', () => {
-    render(<Navigation />);
-    
-    // Find the profile container wrapper containing the text
-    // (There are two rendered: Desktop and Mobile, we trigger the first one)
-    const profileTriggers = screen.getAllByText('Harit Ghetiya');
-    fireEvent.click(profileTriggers[0]);
+  it('Test Case 2: onProfileClick fires when the desktop profile button is clicked', () => {
+    const mockOnProfileClick = jest.fn();
+    render(<Navigation onProfileClick={mockOnProfileClick} />);
 
-    // Assert the modal content successfully rendered on screen
-    expect(screen.getByText(/About The App/i)).toBeInTheDocument();
-    expect(screen.getByText(/Mission Log \(Why I Built It\)/i)).toBeInTheDocument();
+    // getAllByRole finds both desktop + mobile profile buttons
+    const profileButtons = screen.getAllByRole('button');
+    // Desktop profile button is the first button rendered
+    fireEvent.click(profileButtons[0]);
 
-    // Verify Dynamic Contact Badges and exact styled links
-    expect(screen.getByRole('link', { name: /Email/i })).toHaveAttribute('href', 'mailto:haritpatel0902@gmail.com');
-    expect(screen.getByRole('link', { name: /GitHub/i })).toHaveAttribute('href', 'https://github.com/Harit009');
-    expect(screen.getByRole('link', { name: /LinkedIn/i })).toHaveAttribute('href', 'https://www.linkedin.com/in/harit-ghetiya-b91ab9413');
+    expect(mockOnProfileClick).toHaveBeenCalledTimes(1);
   });
 
-  it('Test Case 3 (Dismissal Validation): Modal safely closes and unmounts on [ X ] click without memory leaks', () => {
-    render(<Navigation />);
-    
-    // Trigger open
-    const profileTriggers = screen.getAllByText('Harit Ghetiya');
-    fireEvent.click(profileTriggers[0]);
+  it('Test Case 3: onProfileClick fires when the mobile profile button is clicked', () => {
+    const mockOnProfileClick = jest.fn();
+    render(<Navigation onProfileClick={mockOnProfileClick} />);
 
-    // Verify it is open
-    expect(screen.getByText(/About The App/i)).toBeInTheDocument();
+    const profileButtons = screen.getAllByRole('button');
+    // Mobile profile button is second
+    fireEvent.click(profileButtons[1]);
 
-    // Locate the Close Action [ X ] button by its accessible name and click it
-    const closeButton = screen.getByRole('button', { name: /Close Modal/i });
-    fireEvent.click(closeButton);
+    expect(mockOnProfileClick).toHaveBeenCalledTimes(1);
+  });
 
-    // Assert it unmounts from the DOM
-    expect(screen.queryByText(/About The App/i)).not.toBeInTheDocument();
+  it('Test Case 4: Nav links for Home, Discovery, Tracker are rendered', () => {
+    render(<Navigation onProfileClick={() => {}} />);
+    expect(screen.getAllByRole('link', { name: /home/i }).length).toBeGreaterThan(0);
+    expect(screen.getAllByRole('link', { name: /discovery/i }).length).toBeGreaterThan(0);
+    expect(screen.getAllByRole('link', { name: /tracker/i }).length).toBeGreaterThan(0);
   });
 });

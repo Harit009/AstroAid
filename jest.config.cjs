@@ -41,7 +41,7 @@ module.exports = {
   // Runs BEFORE the test framework: patches HTMLCanvasElement & WebGLRenderingContext
   setupFiles: ["jest-canvas-mock"],
   // Runs AFTER the test framework: installs jest-dom matchers + browser API polyfills
-  setupFilesAfterFramework: ["<rootDir>/jest.setup.js"],
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
 
   // ── Test Discovery ────────────────────────────────────────────────────────────
   testMatch: [

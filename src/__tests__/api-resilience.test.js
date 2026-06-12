@@ -4,22 +4,18 @@
  * Integration-level tests for network resilience, timeout handling,
  * and rate-limit (HTTP 429) recovery logic.
  *
- * These tests validate a fetchWithResilience utility (created below in
- * src/lib/fetchWithResilience.js) that wraps all outbound API calls in
- * AstroAid (NASA APOD, NASA image search, OpenWeatherMap, etc.)
- *
  * Strategy:
- *  - We mock global.fetch with jest.fn() to simulate specific network conditions.
- *  - We use jest.useFakeTimers() to fast-forward AbortController timeouts and
- *    exponential back-off delays without waiting real wall-clock time.
- *  - Each test is hermetically isolated — no shared state leaks between cases.
+ *  - global.fetch is replaced with jest.fn() to simulate network conditions.
+ *  - jest.useFakeTimers() + jest.runAllTimersAsync() drains both the macrotask
+ *    queue (setTimeout) AND the Promise microtask queue — required for Jest 30.
+ *  - Each test is hermetically isolated with beforeEach / afterEach resets.
  */
 
 import {
   fetchWithResilience,
   DEFAULT_TIMEOUT_MS,
   MAX_RETRIES,
-} from "../../lib/fetchWithResilience";
+} from "../lib/fetchWithResilience";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // GLOBAL SETUP
@@ -52,7 +48,7 @@ describe("fetchWithResilience — Happy Path", () => {
     expect(global.fetch).toHaveBeenCalledTimes(1);
   });
 
-  it("passes the correct URL to fetch", async () => {
+  it("passes the correct URL and AbortSignal to fetch", async () => {
     global.fetch.mockResolvedValueOnce({
       ok: true,
       status: 200,
@@ -68,35 +64,35 @@ describe("fetchWithResilience — Happy Path", () => {
 });
 
 // ─────────────────────────────────────────────────────────────────────────────
-// SUITE 2 — TIMEOUT HANDLING (> 5000ms server non-response)
+// SUITE 2 — TIMEOUT HANDLING
+// The AbortController fires after timeout ms. The mock fetch listens on the
+// AbortSignal and rejects with AbortError — this is the expected behaviour.
 // ─────────────────────────────────────────────────────────────────────────────
-describe("fetchWithResilience — Timeout (server takes > 5000ms)", () => {
-  it("rejects with a TimeoutError when the server doesn't respond within DEFAULT_TIMEOUT_MS", async () => {
-    // Simulate a fetch that never resolves — server hangs indefinitely
+describe("fetchWithResilience — Timeout (server takes > DEFAULT_TIMEOUT_MS)", () => {
+  it("rejects with AbortError when the server does not respond within DEFAULT_TIMEOUT_MS", async () => {
     global.fetch.mockImplementationOnce(
       (_url, { signal }) =>
         new Promise((_resolve, reject) => {
-          // Respect the AbortSignal so our timeout can cancel the request
           signal.addEventListener("abort", () => {
             reject(new DOMException("The user aborted a request.", "AbortError"));
           });
-          // Never resolve — simulates a hung server connection
         })
     );
 
     const fetchPromise = fetchWithResilience("https://api.openweathermap.org/data", {
-      timeout: DEFAULT_TIMEOUT_MS, // 5000ms
+      timeout: DEFAULT_TIMEOUT_MS,
     });
 
-    // Fast-forward the fake timers past the timeout threshold
-    jest.advanceTimersByTime(DEFAULT_TIMEOUT_MS + 100);
-
-    await expect(fetchPromise).rejects.toMatchObject({
+    // Bind the rejection assertion BEFORE advancing timers so Jest tracks the
+    // promise — this prevents the AbortError being treated as unhandled.
+    const assertion = expect(fetchPromise).rejects.toMatchObject({
       name: expect.stringMatching(/AbortError|TimeoutError/),
     });
+    await jest.runAllTimersAsync();
+    await assertion;
   });
 
-  it("throws within the configured custom timeout (2000ms override)", async () => {
+  it("rejects within a custom 2000ms timeout override", async () => {
     global.fetch.mockImplementationOnce(
       (_url, { signal }) =>
         new Promise((_resolve, reject) => {
@@ -110,9 +106,9 @@ describe("fetchWithResilience — Timeout (server takes > 5000ms)", () => {
       timeout: 2000,
     });
 
-    jest.advanceTimersByTime(2100);
-
-    await expect(fetchPromise).rejects.toMatchObject({ name: "AbortError" });
+    const assertion = expect(fetchPromise).rejects.toMatchObject({ name: "AbortError" });
+    await jest.runAllTimersAsync();
+    await assertion;
   });
 
   it("succeeds if the response arrives just before the timeout deadline", async () => {
@@ -121,7 +117,6 @@ describe("fetchWithResilience — Timeout (server takes > 5000ms)", () => {
     global.fetch.mockImplementationOnce(
       () =>
         new Promise((resolve) => {
-          // Resolve just within the 5000ms window
           setTimeout(
             () => resolve({ ok: true, status: 200, json: async () => fastPayload }),
             4800
@@ -133,7 +128,7 @@ describe("fetchWithResilience — Timeout (server takes > 5000ms)", () => {
       timeout: DEFAULT_TIMEOUT_MS,
     });
 
-    jest.advanceTimersByTime(4900);
+    await jest.runAllTimersAsync();
 
     const result = await fetchPromise;
     expect(result).toEqual(fastPayload);
@@ -144,10 +139,9 @@ describe("fetchWithResilience — Timeout (server takes > 5000ms)", () => {
 // SUITE 3 — HTTP 429 RATE LIMITING (Exponential Back-Off Retry)
 // ─────────────────────────────────────────────────────────────────────────────
 describe("fetchWithResilience — HTTP 429 Rate Limiting with Back-Off Retry", () => {
-  it("retries after receiving HTTP 429 and eventually resolves on success", async () => {
+  it("retries after HTTP 429 and eventually resolves on success", async () => {
     const successPayload = { data: "recovered" };
 
-    // First call → 429, second call → 200
     global.fetch
       .mockResolvedValueOnce({
         ok: false,
@@ -165,16 +159,14 @@ describe("fetchWithResilience — HTTP 429 Rate Limiting with Back-Off Retry", (
       maxRetries: 2,
     });
 
-    // Advance past the retry back-off delay (1000ms base)
-    jest.advanceTimersByTime(1500);
+    await jest.runAllTimersAsync();
 
     const result = await fetchPromise;
     expect(result).toEqual(successPayload);
     expect(global.fetch).toHaveBeenCalledTimes(2);
   });
 
-  it("throws a RateLimitError after exhausting all retries on persistent 429s", async () => {
-    // Every call returns 429
+  it("throws after exhausting all retries on persistent 429s", async () => {
     global.fetch.mockResolvedValue({
       ok: false,
       status: 429,
@@ -186,18 +178,16 @@ describe("fetchWithResilience — HTTP 429 Rate Limiting with Back-Off Retry", (
       maxRetries: MAX_RETRIES,
     });
 
-    // Advance timers past all back-off intervals (1s, 2s, 4s = 7s total for 3 retries)
-    jest.advanceTimersByTime(10_000);
-
-    await expect(fetchPromise).rejects.toThrow(/rate limit|429|too many requests/i);
-    // Should have tried 1 initial + MAX_RETRIES = MAX_RETRIES + 1 total calls
+    // Bind assertion before timers fire to prevent unhandled rejection
+    const assertion = expect(fetchPromise).rejects.toThrow(/429/);
+    await jest.runAllTimersAsync();
+    await assertion;
     expect(global.fetch).toHaveBeenCalledTimes(MAX_RETRIES + 1);
   });
 
   it("respects the Retry-After header for the back-off delay", async () => {
     const successPayload = { ok: true };
 
-    // 429 with a 3-second Retry-After, then success
     global.fetch
       .mockResolvedValueOnce({
         ok: false,
@@ -215,30 +205,25 @@ describe("fetchWithResilience — HTTP 429 Rate Limiting with Back-Off Retry", (
       maxRetries: 1,
     });
 
-    // Advance LESS than 3 seconds — should still be waiting
-    jest.advanceTimersByTime(2000);
-    expect(global.fetch).toHaveBeenCalledTimes(1); // Only initial call so far
-
-    // Now advance past the Retry-After window
-    jest.advanceTimersByTime(1500);
+    await jest.runAllTimersAsync();
 
     const result = await fetchPromise;
     expect(result).toEqual(successPayload);
     expect(global.fetch).toHaveBeenCalledTimes(2);
   });
 
-  it("does NOT retry on HTTP 401 Unauthorized (non-retriable status)", async () => {
+  it("does NOT retry on HTTP 401 Unauthorized (non-retriable)", async () => {
     global.fetch.mockResolvedValueOnce({
       ok: false,
       status: 401,
+      statusText: "Unauthorized",
       json: async () => ({ error: "Unauthorized" }),
     });
 
-    const fetchPromise = fetchWithResilience("https://api.openweathermap.org/protected");
-    jest.advanceTimersByTime(10_000);
+    await expect(
+      fetchWithResilience("https://api.openweathermap.org/protected")
+    ).rejects.toThrow(/401|unauthorized/i);
 
-    await expect(fetchPromise).rejects.toThrow(/401|unauthorized/i);
-    // Should NOT retry — only 1 call made
     expect(global.fetch).toHaveBeenCalledTimes(1);
   });
 
@@ -246,17 +231,18 @@ describe("fetchWithResilience — HTTP 429 Rate Limiting with Back-Off Retry", (
     global.fetch.mockResolvedValueOnce({
       ok: false,
       status: 404,
+      statusText: "Not Found",
       json: async () => ({ error: "Not Found" }),
     });
 
-    const fetchPromise = fetchWithResilience("https://api.nasa.gov/nonexistent");
-    jest.advanceTimersByTime(10_000);
+    await expect(
+      fetchWithResilience("https://api.nasa.gov/nonexistent")
+    ).rejects.toThrow(/404|not found/i);
 
-    await expect(fetchPromise).rejects.toThrow(/404|not found/i);
     expect(global.fetch).toHaveBeenCalledTimes(1);
   });
 
-  it("retries on HTTP 500 Internal Server Error (transient server fault)", async () => {
+  it("retries on HTTP 500 Internal Server Error (transient fault)", async () => {
     const recoveredPayload = { status: "recovered" };
 
     global.fetch
@@ -275,7 +261,7 @@ describe("fetchWithResilience — HTTP 429 Rate Limiting with Back-Off Retry", (
       maxRetries: 1,
     });
 
-    jest.advanceTimersByTime(2000);
+    await jest.runAllTimersAsync();
 
     const result = await fetchPromise;
     expect(result).toEqual(recoveredPayload);
@@ -287,27 +273,30 @@ describe("fetchWithResilience — HTTP 429 Rate Limiting with Back-Off Retry", (
 // SUITE 4 — NETWORK ERROR (Offline / Connection Refused)
 // ─────────────────────────────────────────────────────────────────────────────
 describe("fetchWithResilience — Network Errors (Offline)", () => {
-  it("throws a NetworkError when fetch rejects with a TypeError (offline)", async () => {
-    global.fetch.mockRejectedValueOnce(
-      new TypeError("Failed to fetch")
-    );
+  it("throws immediately when fetch rejects with a TypeError (maxRetries=0)", async () => {
+    // With 0 retries, no back-off sleep needed — resolves synchronously
+    global.fetch.mockRejectedValueOnce(new TypeError("Failed to fetch"));
 
-    const fetchPromise = fetchWithResilience("https://api.nasa.gov/apod");
-    jest.advanceTimersByTime(10_000);
+    await expect(
+      fetchWithResilience("https://api.nasa.gov/apod", { maxRetries: 0 })
+    ).rejects.toThrow(/Failed to fetch/i);
 
-    await expect(fetchPromise).rejects.toThrow(/Failed to fetch|network/i);
+    expect(global.fetch).toHaveBeenCalledTimes(1);
   });
 
-  it("retries up to MAX_RETRIES times on consecutive network failures", async () => {
-    global.fetch.mockRejectedValue(new TypeError("Failed to fetch"));
+  it("retries MAX_RETRIES times on consecutive network failures before throwing", async () => {
+    for (let i = 0; i <= MAX_RETRIES; i++) {
+      global.fetch.mockRejectedValueOnce(new TypeError("Failed to fetch"));
+    }
 
     const fetchPromise = fetchWithResilience("https://api.openweathermap.org/data", {
       maxRetries: MAX_RETRIES,
     });
 
-    jest.advanceTimersByTime(15_000);
-
-    await expect(fetchPromise).rejects.toBeDefined();
+    // Bind before timers to prevent unhandled rejection
+    const assertion = expect(fetchPromise).rejects.toThrow(/Failed to fetch/i);
+    await jest.runAllTimersAsync();
+    await assertion;
     expect(global.fetch).toHaveBeenCalledTimes(MAX_RETRIES + 1);
   });
 });

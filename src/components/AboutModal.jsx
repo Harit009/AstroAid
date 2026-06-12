@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin } from 'lucide-react';
+import { Mail, ExternalLink, Link2 } from 'lucide-react';
 
 export default function AboutModal({ isOpen, onClose }) {
   if (!isOpen) return null;
@@ -66,7 +66,7 @@ export default function AboutModal({ isOpen, onClose }) {
                 rel="noopener noreferrer" 
                 className="flex items-center gap-2 px-4 py-2 rounded-lg border border-zinc-700 bg-slate-800/50 hover:bg-slate-700 hover:border-zinc-500 transition-all text-sm font-mono text-zinc-300 hover:text-white group"
               >
-                <Github className="w-4 h-4 text-zinc-400 group-hover:text-[#00E5FF]" />
+                <ExternalLink className="w-4 h-4 text-zinc-400 group-hover:text-[#00E5FF]" />
                 GitHub
               </a>
               <a 
@@ -75,7 +75,7 @@ export default function AboutModal({ isOpen, onClose }) {
                 rel="noopener noreferrer" 
                 className="flex items-center gap-2 px-4 py-2 rounded-lg border border-zinc-700 bg-slate-800/50 hover:bg-slate-700 hover:border-zinc-500 transition-all text-sm font-mono text-zinc-300 hover:text-white group"
               >
-                <Linkedin className="w-4 h-4 text-zinc-400 group-hover:text-[#00E5FF]" />
+                <Link2 className="w-4 h-4 text-zinc-400 group-hover:text-[#00E5FF]" />
                 LinkedIn
               </a>
             </div>
