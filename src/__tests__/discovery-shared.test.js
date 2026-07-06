@@ -74,7 +74,7 @@ describe('Discovery database shared utilities', () => {
     expect(analysis.scientificNotes).toContain('NASA center: GSFC');
   });
 
-  it('keeps curated entity images ahead of NASA enrichment images', () => {
+  it('uses selected NASA images ahead of curated placeholders', () => {
     const viewModel = entityRecordToViewModel({
       id: 'entity-1',
       name: 'Magnetar',
@@ -84,11 +84,11 @@ describe('Discovery database shared utilities', () => {
       deepDiveOverview: [],
       nasaEnrichments: [{
         selected: true,
-        mediaUrl: 'https://images-assets.nasa.gov/off-topic.jpg',
+        mediaUrl: 'https://images-assets.nasa.gov/magnetar.jpg',
       }],
       aiAnalyses: [],
     });
 
-    expect(viewModel.cardImageUrl).toBe('/curated-magnetar.png');
+    expect(viewModel.cardImageUrl).toBe('https://images-assets.nasa.gov/magnetar.jpg');
   });
 });

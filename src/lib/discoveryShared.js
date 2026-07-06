@@ -38,7 +38,7 @@ export function entityRecordToViewModel(entity) {
     slug: entity.slug,
     category: entity.category,
     imageUrl: entity.imageUrl,
-    cardImageUrl: entity.imageUrl || selectedNasa?.mediaUrl || '/cosmic_nebula_bg.png',
+    cardImageUrl: selectedNasa?.mediaUrl || entity.imageUrl || '/cosmic_nebula_bg.png',
     scientificClassification: entity.scientificClassification,
     deepDiveOverview: entity.deepDiveOverview || [],
     the2026Update: entity.the2026Update,
@@ -53,8 +53,14 @@ export function entityRecordToViewModel(entity) {
   };
 }
 
-export function computeNasaConfidence(entityName, item) {
+function includesPhrase(text, phrase) {
+  return text.includes(String(phrase || '').toLowerCase());
+}
+
+export function computeNasaConfidence(entityName, item, options = {}) {
   const name = entityName.toLowerCase();
+  const positiveKeywords = options.positiveKeywords || [];
+  const negativeKeywords = options.negativeKeywords || [];
   const title = String(item?.data?.[0]?.title || '').toLowerCase();
   const description = String(item?.data?.[0]?.description || '').toLowerCase();
   const keywords = (item?.data?.[0]?.keywords || []).map((keyword) => String(keyword).toLowerCase());
@@ -64,9 +70,17 @@ export function computeNasaConfidence(entityName, item) {
   if (title.includes(name)) score += 0.45;
   if (description.includes(name)) score += 0.25;
   if (keywords.some((keyword) => keyword.includes(name))) score += 0.2;
+  for (const keyword of positiveKeywords) {
+    if (includesPhrase(title, keyword)) score += 0.2;
+    if (includesPhrase(description, keyword)) score += 0.1;
+    if (keywords.some((itemKeyword) => includesPhrase(itemKeyword, keyword))) score += 0.12;
+  }
+  for (const keyword of negativeKeywords) {
+    if (includesPhrase(haystack, keyword)) score -= 0.35;
+  }
   if (item?.links?.[0]?.href) score += 0.1;
 
-  return Number(Math.min(score, 1).toFixed(2));
+  return Number(Math.max(0, Math.min(score, 1)).toFixed(2));
 }
 
 export function buildLocalAnalysis(entity, nasaEnrichment = null) {
