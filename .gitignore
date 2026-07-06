@@ -25,6 +25,12 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+dev-server.log
+dev-server.err
+
+# Local database artifacts
+prisma/dev.db
+prisma/dev.db-journal
 
 # Editor / IDE configuration directories
 .idea/

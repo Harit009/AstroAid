@@ -1,0 +1,84 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model DiscoveryEntity {
+  id                       String           @id @default(cuid())
+  name                     String           @unique
+  slug                     String           @unique
+  category                 String
+  imageUrl                 String?
+  scientificClassification String?
+  deepDiveOverview         Json
+  the2026Update            String?
+  mathematicalFoundation   String?
+  externalCitation         String?
+  visualPrompt             String?
+  liveStatus               String?
+  referenceDoi             String?
+  technicalSpecs           Json?
+  createdAt                DateTime         @default(now())
+  updatedAt                DateTime         @updatedAt
+  nasaEnrichments          NasaEnrichment[]
+  aiAnalyses               AiAnalysis[]
+  sources                  EntitySource[]
+
+  @@index([category])
+}
+
+model NasaEnrichment {
+  id              String          @id @default(cuid())
+  entityId        String
+  entity          DiscoveryEntity @relation(fields: [entityId], references: [id], onDelete: Cascade)
+  query           String
+  nasaId          String?
+  title           String?
+  description     String?
+  mediaUrl        String?
+  center          String?
+  keywords        Json?
+  dateCreated     DateTime?
+  rawPayload      Json?
+  confidenceScore Float           @default(0)
+  selected        Boolean         @default(false)
+  retrievedAt     DateTime        @default(now())
+
+  @@index([entityId])
+  @@index([selected])
+}
+
+model AiAnalysis {
+  id                  String          @id @default(cuid())
+  entityId            String
+  entity              DiscoveryEntity @relation(fields: [entityId], references: [id], onDelete: Cascade)
+  mergedSummary       String
+  beginnerExplanation String
+  scientificNotes     Json
+  sourceConflicts     Json
+  confidenceScore     Float
+  modelUsed           String
+  promptVersion       String
+  rawOutput           Json?
+  generatedAt         DateTime        @default(now())
+
+  @@index([entityId])
+  @@index([generatedAt])
+}
+
+model EntitySource {
+  id            String          @id @default(cuid())
+  entityId      String
+  entity        DiscoveryEntity @relation(fields: [entityId], references: [id], onDelete: Cascade)
+  sourceType    String
+  sourceUrl     String?
+  citationLabel String?
+  retrievedAt   DateTime        @default(now())
+
+  @@index([entityId])
+  @@index([sourceType])
+}
