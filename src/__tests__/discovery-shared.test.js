@@ -1,6 +1,7 @@
 import {
   buildLocalAnalysis,
   computeNasaConfidence,
+  entityRecordToViewModel,
   normalizeJsonEntity,
   toDiscoverySlug,
 } from '../lib/discoveryShared';
@@ -71,5 +72,23 @@ describe('Discovery database shared utilities', () => {
     });
     expect(analysis.mergedSummary).toContain('Orion Nebula');
     expect(analysis.scientificNotes).toContain('NASA center: GSFC');
+  });
+
+  it('keeps curated entity images ahead of NASA enrichment images', () => {
+    const viewModel = entityRecordToViewModel({
+      id: 'entity-1',
+      name: 'Magnetar',
+      slug: 'magnetar',
+      category: 'Object',
+      imageUrl: '/curated-magnetar.png',
+      deepDiveOverview: [],
+      nasaEnrichments: [{
+        selected: true,
+        mediaUrl: 'https://images-assets.nasa.gov/off-topic.jpg',
+      }],
+      aiAnalyses: [],
+    });
+
+    expect(viewModel.cardImageUrl).toBe('/curated-magnetar.png');
   });
 });

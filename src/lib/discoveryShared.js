@@ -38,7 +38,7 @@ export function entityRecordToViewModel(entity) {
     slug: entity.slug,
     category: entity.category,
     imageUrl: entity.imageUrl,
-    cardImageUrl: selectedNasa?.mediaUrl || entity.imageUrl || '/cosmic_nebula_bg.png',
+    cardImageUrl: entity.imageUrl || selectedNasa?.mediaUrl || '/cosmic_nebula_bg.png',
     scientificClassification: entity.scientificClassification,
     deepDiveOverview: entity.deepDiveOverview || [],
     the2026Update: entity.the2026Update,
